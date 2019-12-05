@@ -1,0 +1,1310 @@
+#!/bin/bash
+
+clear
+
+vis(){
+echo "=============================================================================================================="
+echo "|                                          _______                                                           |"
+echo "|                                 |\    /| |       |\     | |      |                                         |"
+echo "|                                 | \  / | |       | \    | |      |                                         |"
+echo "|                                 |  \/  | |_____  |  \   | |      |                                         |"
+echo "|                                 |      | |       |   \  | |      |                                         |"
+echo "|                                 |      | |       |    \ | |      |                                         |"
+echo "|                                 |      | |______ |     \| |______|                                         |"
+echo "|                                                                                                            |"
+echo "|                __________ _______  _____                 ______  __________                  _______       |"
+echo "|     | |\     |      |     |       |     |      /\       /      \      |     | \          /  /       \      |"
+echo "|     | | \    |      |     |       |     |     /  \     |              |     |  \        /  |         |     |"
+echo "|     | |  \   |      |     |_____  |  __/     /    \    |              |     |   \      /   |         |     |"
+echo "|     | |   \  |      |     |       |   \     /______\   |              |     |    \    /    |         |     |"
+echo "|     | |    \ |      |     |       |    \   /        \  |              |     |     \  /     |         |     |"
+echo "|     | |     \|      |     |______ |     \ /          \  \______/      |     |      \/       \_______/      |"
+echo "|                                                                                                            |"
+echo "|                                                                                                            |"
+echo "|                                                                                                            |"
+echo "|                   A.-LAB1                    C.-LAB3                          E.-LAB5                      |"
+echo "|                                                                                                            |"
+echo "|                              B.-LAB2                         D.-LAB4                                       |"
+echo "|                                                                                                   S.-Exit  |"
+echo "=============================================================================================================="
+}
+
+while true
+do
+        vis
+        echo "BIENVENIDO, ¿Cual LAB quiere ejecutar?:"
+        read n
+        case $n in
+                A)cd /home/ujuarez/LABS && ./LAB1.sh && sleep 1 && clear;;
+                B)cd /home/ujuarez/LABS && ./LAB2.sh && sleep 1 && clear;;
+                C)cd /home/ujuarez/LABS && ./LAB3.sh && sleep 1 && clear;;
+                D)cd /home/ujuarez/LABS && ./LAB4.sh && sleep 1 && clear;;
+                E)cd /home/ujuarez/LABS && ./LAB5.sh && sleep 1 && clear;;
+                S)echo "Hasta la proxima crack" && sleep 2 && clear && exit 0;;
+                *)echo "Opcion no encontrada, intente de nuevo:" && sleep 1 && clear;;
+
+        esac
+done
+## Aqui termina el codigo de la interfaz del menu Interactivo de los 5 LABS.
+========================================================================================================
+## Aqui mismo pondre los codigos de los 5 LABS.
+LAB 1
+#!/bin/bash
+
+#LABORATORIO 1
+
+
+
+                        echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+                        echo "LAB 1 - Comandos basicos para navegar en carpetas."
+                read -p "Presiona [ENTER] para comenzar..." fackEnterkey
+                        echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+                        clear 0
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nVerifica el Directorio Actual:\n"
+                read R
+                if [ "$R" = "pwd" ]; then
+                        echo -e "Comando correcto, Mostrando salida del comando:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        echo -e "Quieres continuar?[Y-N]."
+        read F
+        case $F in
+                Y)continue;;
+                N)exit;;
+        esac
+                        clear 0
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nCrea la carpeta \"dir1\":\n"
+                read R
+                if [ "$R" = "mkdir -v dir1" ]; then
+                        echo -e "Comando correcto"
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        sleep 1
+                        clear 0
+
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nCrea la carpeta \"dir2\":\n"
+                read R
+                if [ "$R" = "mkdir -v dir2" ]; then
+                        echo -e "Comando correcto"
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        sleep 1
+                        clear 0
+
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nCrea la carpeta dir3 dentro de dir2:\n"
+                read R
+                if [ "$R" = "mkdir -v dir2/dir3" ]; then
+                        echo -e "Comando correcto"
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        sleep 1
+                        clear 0
+
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nCrea la carpeta dir4 dentro de dir3\n"
+                read R
+                if [ "$R" = "mkdir -v dir2/dir3/dir4" ]; then
+                        echo -e "Comando correcto"
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        sleep 1
+                        clear 0
+
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nLista el contenido del directorio actual\n"
+                read R
+                if [ "$R" = "ls" ]; then
+                        echo -e "Comando correcto, Mostrando salida del comando:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                                echo -e "Quieres continuar?[Y-N]."
+        read F
+        case $F in
+                Y)continue;;
+                N)exit;;
+        esac
+                        clear 0
+
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nLista todos los archivos en la carpeta actual de forma recursiva\n"
+                read R
+                if [ "$R" = "ls -R" ]; then
+                        echo -e "Comando correcto, Mostrando salida del comando:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        sleep 1
+                        clear 0
+
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nCambiate a la carpeta dir2\n"
+                read R
+                if [ "$R" = "cd dir2" ]; then
+                        echo -e "Comando correcto"
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        sleep 1
+                        clear 0
+
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nRegresa a la carpeta anterior\n"
+                read R
+                if [ "$R" = "cd -" ]; then
+                        echo -e "Comando correcto"
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        sleep 1
+                        clear 0
+
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nCambia a la carpeta de inicio del usuario actual\n"
+                read R
+                if [ "$R" = "cd" ]; then
+                        echo -e "Comando correcto"
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        echo "Haz completado el LAB 1 \"Buena esa crack\""
+                        sleep 2
+                        break
+                fi
+
+        done
+=================================================================================================================
+LAB 2
+#!/bin/bash
+
+#LABORATORIO 2
+                        echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+                        echo "LAB 2 - Crear archivos, desplegar su contenido y estadisticas."
+                read -p "Presiona [ENTER] para comenzar..." fackEnterkey
+                        echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+                        clear 0
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nCrea el archivo file1.txt:\n"
+                read R
+                if [ "$R" = "touch file1.txt" ]; then
+                        echo -e "Comando correcto:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        echo -e "Quieres continuar?[Y-N]."
+        read F
+        case $F in
+                Y)continue;;
+                N)exit;;
+        esac
+
+                        clear 0
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nCambia el timestamp del archivo file1.txt:\n"
+                read R
+                if [ "$R" = "touch file1.txt" ]; then
+                        echo -e "Comando correcto:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        sleep 1
+                        clear 0
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nCrea el archivo file2.txt:\n"
+                read R
+                if [ "$R" = "touch file2.txt" ]; then
+                        echo -e "Comando correcto:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        sleep 1
+                        clear 0
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nDespliega el contenido del directorio actual usando un comando diferente a ls:\n"
+                read R
+                if [ "$R" = "dir" ]; then
+                        echo -e "Comando correcto, Mostrando salida del comando:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        sleep 1
+                        clear 0
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nLimpia el contenido de la terminal:\n"
+                read R
+                if [ "$R" = "clear" ]; then
+                        echo -e "Comando correcto:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        sleep 1
+                        clear 0
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nDespliega el texto hello:\n"
+                read R
+                if [ "$R" = "echo hello" ]; then
+                        echo -e "Comando correcto, Mostrando salida del comando:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        sleep 1
+                        clear 0
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nRedirige la salida del comando anterior hacia un archivo:\n"
+                read R
+                if [ "$R" = "echo hello > hello.txt" ]; then
+                        echo -e "Comando correcto:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        sleep 1
+                        clear 0
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nAdjunta el texto linux al archivo hello.txt:\n"
+                read R
+                if [ "$R" = "echo linux >> hello.txt" ]; then
+                        echo -e "Comando correcto:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        echo -e "Quieres continuar?[Y-N]."
+        read F
+        case $F in
+                Y)continue;;
+                N)exit;;
+        esac
+
+                        clear 0
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nAdjunta el texto world al archivo hello.txt:\n"
+                read R
+                if [ "$R" = "echo world >> hello.txt" ]; then
+                        echo -e "Comando correcto:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        sleep 1
+                        clear 0
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nDespliega en la pantalla el contenido del archivo hello.txt:\n"
+                read R
+                if [ "$R" = "cat hello.txt" ]; then
+                        echo -e "Comando correcto, Mostrando salida del comando:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        sleep 1
+                        clear 0
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nDespliega en la pantalla el contenido del archivo hello.txt usando el comando head:\n"
+                read R
+                if [ "$R" = "head hello.txt" ]; then
+                        echo -e "Comando correcto, Mostrando salida del comando:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        sleep 1
+                        clear 0
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nDespliega solo las ultimas dos lineas del archivo hello.txt:\n"
+                read R
+                if [ "$R" = "tail -2 hello.txt" ]; then
+                        echo -e "Comando correcto, Mostrando salida del comando:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        sleep 1
+                        clear 0
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nDespliega las ultimas lineas del archivo hello.txt:\n"
+                read R
+                if [ "$R" = "tail hello.txt" ]; then
+                        echo -e "Comando correcto, Mostrando salida del comando:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        sleep 1
+                        clear 0
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nMuestra las estadisticas para el archivo hello.txt:\n"
+                read R
+                if [ "$R" = "stat hello.txt" ]; then
+                        echo -e "Comando correcto, Mostrando salida del comando:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        sleep 1
+                        clear 0
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nMuestra las estadisticas para la carpeta dir1:\n"
+                read R
+                if [ "$R" = "stat dir1" ]; then
+                        echo -e "Comando correcto, Mostrando salida del comando:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        echo "Haz completado el LAB 2 \"Buena esa crack\""
+                        sleep 1
+                        break
+                fi
+        done
+==================================================================================================
+LAB 3
+#!/bin/bash
+
+#LABORATORIO 3
+                        echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+                        echo "LAB 3 - Copiar, renombrar y borrar archivos."
+                read -p "Presiona [ENTER] para comenzar..." fackEnterkey
+                        echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+                        clear 0
+
+
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nDespliega en pantalla el uso del disco de la carpeta actual:\n"
+                read R
+                if [ "$R" = "du" ]; then
+                        echo -e "Comando correcto, Mostrando salida del comando:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        echo -e "Quieres continuar?[Y-N]."
+        read F
+        case $F in
+                Y)continue;;
+                N)exit;;
+        esac
+
+                        clear 0
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nDespliega en pantalla el uso del disco de la carpeta actual en un formato legible:\n"
+                read R
+                if [ "$R" = "du -xh ~" ]; then
+                        echo -e "Este comando podria tardar en carpetas de gran tamaño, asi que puedes optar por el parametro: --max-depth"
+                        echo -e "Comando correcto, Mostrando salida del comando:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        sleep 1
+                        clear 0
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nCopia el archivo hello.txt a la carpeta dir2:\n"
+                read R
+                if [ "$R" = "cp -v hello.txt dir2" ]; then
+                        echo -e "Comando correcto:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        sleep 1
+                        clear 0
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nCopia y renombra el archivo hello.txt a dir2/file2.txt:\n"
+                read R
+                if [ "$R" = "cp -v hello.txt dir2/file2.txt" ]; then
+                        echo -e "Comando correcto:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        sleep 1
+                        clear 0
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nCopia todos los archivos con la extension .txt de la carpeta dir2 a la carpeta dir2/dir3:\n"
+                read R
+                if [ "$R" = "cp -vr dir2/*.txt dir2/dir3" ]; then
+                        echo -e "Comando correcto:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        sleep 1
+                        clear 0
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nCopia la carpeta dir2/dir3 al directorio actual:\n"
+                read R
+                if [ "$R" = "cp -vr dir2/dir3 ." ]; then
+                        echo -e "Comando correcto:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        sleep 1
+                        clear 0
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nMuestra el contenido de la carpeta actual:\n"
+                read R
+                if [ "$R" = "ls" ]; then
+                        echo -e "Comando correcto, Mostrando salida del comando:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        sleep 1
+                        clear 0
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nVerifica la integridad de los archivos copiado hello.txt:\n"
+                read R
+                if [ "$R" = "md5sum hello.txt" ]; then
+                        echo -e "Comando correcto, Mostrando salida del comando:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        sleep 1
+                        clear 0
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nMueve el archivo hello.txt a dir2/dir3/dir4/hi.txt:\n"
+                read R
+                if [ "$R" = "mv hello.txt dir2/dir3/dir4/hi.txt" ]; then
+                        echo -e "Comando correcto:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        sleep 1
+                        clear 0
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nMuestra el contenido de la carpeta dir4:\n"
+                read R
+                if [ "$R" = "ls" ]; then
+                        echo -e "Comando correcto, Mostrando salida del comando:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        sleep 1
+                        clear 0
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nCrea la carpeta dir5:\n"
+                read R
+                if [ "$R" = "mkdir dir5" ]; then
+                        echo -e "Comando correcto:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        echo -e "Quieres continuar?[Y-N]."
+        read F
+        case $F in
+                Y)continue;;
+                N)exit;;
+        esac
+
+                        clear 0
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nMueve todos los archivos de texto de dir2 hacia dir5:\n"
+                read R
+                if [ "$R" = "mv dir2/*.txt dir5" ]; then
+                        echo -e "Comando correcto:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        sleep 1
+                        clear 0
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nRenombra la carpeta dir5 a dir50:\n"
+                read R
+                if [ "$R" = "mv dir5 dir50" ]; then
+                        echo -e "Comando correcto:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        sleep 1
+                        clear 0
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nCrea un enlace llamado hello desde el directorio actual hacia dir2/dir3/dir4/hi.txt:\n"
+                read R
+                if [ "$R" = "ln dir2/dir3/dir4/hi.txt hello" ]; then
+                        echo -e "Comando correcto:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        sleep 1
+                        clear 0
+                        break
+                  fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nVerifica el inode de cada archivo:\n"
+                read R
+                if [ "$R" = "stat dir2/dir3/dir4/hi.txt" ]; then
+                        echo -e "Comando correcto, Mostrando salida del comando:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        sleep 1
+                        clear 0
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nCrea un acceso directo llamado softlink desde el directorio actual hacia dir2/dir3/dir4/hi.txt:\n"
+                read R
+                if [ "$R" = "ln -s dir2/dir3/dir4/hi.txt softlink" ]; then
+                        echo -e "Comando correcto:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        sleep 1
+                        clear 0
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nElimina el archivo file2.txt de forma interactiva:\n"
+                read R
+                if [ "$R" = "rm -i file2.txt" ]; then
+                        echo -e "Comando correcto:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        sleep 1
+                        clear 0
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nElimina de forma interactiva y recursiva el contenido de dir5:\n"
+                read R
+                if [ "$R" = "rm -ir dir50/*" ]; then
+                        echo -e "Comando correcto:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        sleep 1
+                        clear 0
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nElimina el directorio dir50:\n"
+                read R
+                if [ "$R" = "rmdir dir50" ]; then
+                        echo -e "Comando correcto:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        echo -e "Haz completado el LAB 3 \"Buena esa crack\""
+                        sleep 1
+                        break
+                fi
+        done
+=======================================================================================================================
+LAB 4
+#!/bin/bash
+
+#LABORATORIO 4
+                        echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+                        echo "LAB 4 - Comandos basicos para administrar procesos."
+                read -p "Presiona [ENTER] para comenzar..." fackEnterkey
+                        echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+                        clear 0
+
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nEjecuta el comando ps y analiza su salida:\n"
+                read R
+                if [ "$R" = "ps" ]; then
+                        echo -e "Comando correcto, Mostrando salida del comando:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        echo -e "Quieres continuar?[Y-N]."
+        read F
+        case $F in
+                Y)continue;;
+                N)exit;;
+        esac
+
+                        clear 0
+                        break
+
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nCrea un nuevo proceso:\n"
+                read R
+                if [ "$R" = "sleep 60 &" ]; then
+                        echo -e "Comando correcto:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        sleep 1
+                        clear 0
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nEjecuta ps y analiza su salida:\n"
+                read R
+                if [ "$R" = "ps" ]; then
+                        echo -e "Comando correcto, Mostrando salida del comando:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        sleep 1
+                        clear 0
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nMata el proceso creado en el paso 2 (remplaza 12345 por el ID del proceso):\n"
+                read R
+                if [ "$R" = "kill" ]; then
+                        echo -e "Comando correcto:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        sleep 1
+                        clear 0
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nVerifica con ps si el proceso sigue vivo:\n"
+                read R
+                if [ "$R" = "ps" ]; then
+                        echo -e "Comando correcto, Mostrando salida del comando:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        sleep 1
+                        clear 0
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nObliga al proceso a morir enviando la señal -9:\n"
+                read R
+                if [ "$R" = "kill -p" ]; then
+                        echo -e "Comando correcto:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        sleep 1
+                        clear 0
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nVerifica con ps si el proceso sigue vivo:\n"
+                read R
+                if [ "$R" = "ps" ]; then
+                        echo -e "Comando correcto, Mostrando salida del comando:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        sleep 1
+                        clear 0
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nInicia dos procesos mas:\n"
+                read R
+                if [ "$R" = "sleep 30 &" ]; then
+                        $R
+                fi
+                echo -e "\nInicia el segundo proceso:\n"
+                read R
+                if [ "$R" = "sleep 30 &" ]; then
+                        echo -e "Comandos correctos:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        sleep 1
+                        clear 0
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nVerifica con ps si los procesos estan ejecutandose:\n"
+                read R
+                if [ "$R" = "ps" ]; then
+                        echo -e "Comando correcto, Mostrando salida del comando:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        sleep 1
+                        clear 0
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nMata los procesos asociados al comando sleep:\n"
+                read R
+                if [ "$R" = "killall sleep" ]; then
+                        echo -e "Comando correcto:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        echo -e "Quieres continuar?[Y-N]."
+        read F
+        case $F in
+                Y)continue;;
+                N)exit;;
+        esac
+
+                        clear 0
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nMata todos los procesos asociados al usuario actual:\n"
+                read R
+                if [ "$R" = "killall -u ujuarez" ]; then
+                        echo -e "Comando correcto:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        sleep 1
+                        clear 0
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nMata todos los procesos asociados al comando find ejecutados por el usuario actual:\n"
+                read R
+                if [ "$R" = "killall -w find" ]; then
+                        echo -e "Comando correcto:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        sleep 1
+                        clear 0
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nObten el PID del proceso bash:\n"
+                read R
+                if [ "$R" = "pidof bash" ]; then
+                        echo -e "Comando correcto, Mostrando salida del comando:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        sleep 1
+                        clear 0
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nUtiliza el comando nice para cambiar la prioridad de un proceso:\n"
+                read R
+                if [ "$R" = "nice -n 19 sleep 30 &" ]; then
+                        echo -e "Comando correcto:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        sleep 1
+                        clear 0
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nUtiliza el comando top para visualizar los procesos:\n"
+                read R
+                if [ "$R" = "top" ]; then
+                        echo -e "Comando correcto, Mostrando salida del comando:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        sleep 1
+                        clear 0
+                        break
+                fi
+        done
+
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nUtiliza el comando pstree y analiza su salida:\n"
+                read R
+                if [ "$R" = "pstree" ]; then
+                        echo -e "Comando correcto, Mostrando salida del comando:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        sleep 1
+                        clear 0
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nVerifica el tiempo que tarda en ejecutarse un comando:\n"
+                read R
+                if [ "$R" = "time ls -l" ]; then
+                        echo -e "Comando correcto, Mostrando salida del comando:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        echo "Haz completado el LAB 4 \"Buena esa crack\""
+                        sleep 1
+                        break
+                fi
+        done
+=========================================================================================================================
+LAB 5
+#!/bin/bash
+
+#LABORATORIO 5
+                        echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+                        echo "LAB 5 - Manipular o parsear contenido de archivos."
+                read -p "Presiona [ENTER] para comenzar..." fackEnterkey
+                        echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+                        clear 0
+
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nBusca la palabra linux en el archivo hello:\n"
+                read R
+                if [ "$R" = "grep linux hello" ]; then
+                        echo -e "Comando correcto, Mostrando salida del comando:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        echo -e "Quieres continuar?[Y-N]."
+        read F
+        case $F in
+                Y)continue;;
+                N)exit;;
+        esac
+
+                        clear 0
+                        break
+
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nBusca la palabra hello en toda la carpeta actual:\n"
+                read R
+                if [ "$R" = "grep -r hello ." ]; then
+                        echo -e "Comando correcto, Mostrando salida del comando:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        sleep 1
+                        clear 0
+                        break
+                fi
+        done
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nBusca la palabra linux en el archivo hello, imprimiendo el numero de linea del archivo:\n"
+                read R
+                if [ "$R" = "grep -n linux hello" ]; then
+                        echo -e "Comando correcto, Mostrando salida del comando:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        sleep 1
+                        clear 0
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nDespliega las lineas que no coinciden con el patron de busqueda:\n"
+                read R
+                if [ "$R" = "grep -v world hello" ]; then
+                        echo -e "Comando correcto, Mostrando salida del comando:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        sleep 1
+                        clear 0
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nEncuentra la linea mas larga dentro del archivo hello:\n"
+                read R
+                if [ "$R" = "wc -L hello" ]; then
+                        echo -e "Comando correcto, Mostrando salida del comando:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        sleep 1
+                        clear 0
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nMuestra solo la primer columna del archivo new.txt:\n"
+                read R
+                if [ "$R" = "cut -f1 -d' ' new.txt" ]; then
+                        echo -e "Comando correcto, Mostrando salida del comando:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        sleep 1
+                        clear 0
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nExtrae la tercer columna del archivo new.txt:\n"
+                read R
+                if [ "$R" = "cut -f3 -d' ' new.txt" ]; then
+                        echo -e "Comando correcto, Mostrando salida del comando:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        echo -e "Quieres continuar?[Y-N]."
+        read F
+        case $F in
+                Y)continue;;
+                N)exit;;
+        esac
+
+                        clear 0
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nMezcla las lineas de los archivos hello y new.txt:\n"
+                read R
+                if [ "$R" = "paste hello new.txt" ]; then
+                        echo -e "Comando correcto:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        sleep 1
+                        clear 0
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nOrdena el contenido del archivo new.txt:\n"
+                read R
+                if [ "$R" = "sort new.txt" ]; then
+                        echo -e "Comando correcto:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        sleep 1
+                        clear 0
+                        break
+                fi
+        done
+
+while [ $try 0 ];
+        do
+                        echo "=========================================================================="
+                echo -e "\nCompara el contenido del archivo hello y linux.txt:\n"
+                read R
+                if [ "$R" = "diff hello linux.txt" ]; then
+                        echo -e "Comando correcto, Mostrando salida del comando:"
+                        $R
+                        echo "=========================================================================="
+                        echo -e "\n\n"
+                        echo -e "Haz completado el LAB 5 \"Buena esa crack\""
+                        sleep 1
+                        break
+                fi
+        done
