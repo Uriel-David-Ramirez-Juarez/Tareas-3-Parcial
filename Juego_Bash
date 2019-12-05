@@ -1,0 +1,978 @@
+#!/bin/bash
+
+## Tester
+
+clear
+
+vis(){
+echo "============================================================================="
+echo "|                                                                           |"
+echo "|  __________   __________    ______    __________  ___________   _______   |"
+echo "|      |         |           /      \       |        |           |       \  |"
+echo "|      |         |           |              |        |           |       |  |"
+echo "|      |         |           |              |        |           |       /  |"
+echo "|      |         |_______    \______        |        |_______    |  ____/   |"
+echo "|      |         |                  \       |        |           |   \      |"
+echo "|      |         |                  |       |        |           |    \     |"
+echo "|      |         |                  |       |        |           |     \    |"
+echo "|      |         _________   \______/       |        __________  |      \   |"
+echo "|                                                                           |"
+echo "|                                                                           |"
+echo "============================================================================="
+}
+
+while true
+do
+
+vis
+echo " "
+echo "====================================="
+echo "|                                   |"
+echo "|    Nivel            Dificultad    |"
+echo "|                                   |"
+echo "|      1                Facil       |"
+echo "|      2                Normal      |"
+echo "|      3                Dificil     |"
+echo "|                                   |"
+echo "|              4=Salir              |"
+echo "====================================="
+
+printf "Bienvenido \"Selecciona un nivel\": "
+read a
+case $a in
+        1)cd /home/ujuarez/Niveles && ./Nivel1.sh && clear ;;
+        2)cd /home/ujuarez/Niveles && ./Nivel2.sh && clear ;;
+        3)cd /home/ujuarez/Niveles && ./Nivel3.sh && clear ;;
+        4)clear && exit;;
+        *)echo "Opcion no encontrada, intenta otra vez." && sleep 2 && clear ;;
+esac
+done
+
+## Aqui termina el codigo de la interfaz del Juego.
+==============================================================================================================
+## Aqui mismo pondre los codigos de los 3 Niveles.
+
+Nivel 1
+#!/bin/bash
+
+## Nivel_1 Facil
+
+calificacion=0
+
+clear
+
+rep(){
+echo " "
+echo "======================"
+echo "|                    |"
+echo "|     REPROBASTE     |"
+echo "|                    |"
+echo "======================"
+echo " "
+echo "Reprobaste pero tranquilo, lo bueno que este no es un examen valido xd"
+}
+clear
+
+apro(){
+echo " "
+echo "======================"
+echo "|                    |"
+echo "|     APROBASTE      |"
+echo "|                    |"
+echo "======================"
+echo " "
+echo "Wow eres muy inteligente, sigue asi crack"
+}
+clear
+
+vis(){
+echo "========================================"
+echo "|                                      |"
+echo "|    Nivel: 1       Dificultad: Facil  |"
+echo "|                                      |"
+echo "========================================"
+}
+
+
+while [ $try 0 ];
+do
+        vis
+        echo "No.1"
+        echo "Comando: pwd"
+
+        echo " "
+        echo "a) Visualisa el estado de red."
+        echo "b) Visualisa los directorios del usuario."
+        echo "c) Visualisa la ruta del directorio en el que te ubicas."
+
+        echo " "
+        echo "Selecciona la Funcion que creas es la correcta: "
+        read R
+        if [ "$R" = "c" ]
+        then
+                ((calificacion=calificacion+1))
+                clear
+                break
+        else
+                clear
+                break
+                fi;
+done
+
+while [ $try 0 ];
+do
+        vis
+        echo "No.2"
+        echo "Comando: mkdir"
+
+        echo " "
+        echo "a) Muestra el contenido de un archivo."
+        echo "b) Copia archivos o directorios."
+        echo "c) Crea carpetas."
+
+        echo " "
+        echo "Selecciona la Funcion que creas es la correcta: "
+        read R
+        if [ "$R" = "c" ]
+        then
+                ((calificacion=calificacion+1))
+                clear
+                break
+        else
+                clear
+                break
+                fi;
+done
+
+while [ $try 0 ];
+do
+        vis
+        echo "No.3"
+        echo "Comando: touch"
+
+        echo " "
+        echo "a) Crea archivos."
+        echo "b) Corta archivos."
+        echo "c) Pega archivos."
+
+        echo " "
+        echo "Selecciona la Funcion que creas es la correcta: "
+        read R
+        if [ "$R" = "a" ]
+        then
+                ((calificacion=calificacion+1))
+                clear
+                break
+        else
+                clear
+                break
+                fi;
+done
+
+while [ $try 0 ];
+do
+        vis
+        echo "No.4"
+        echo "Comando: ls"
+
+        echo " "
+        echo "a) Cambia de un directorio a otro."
+        echo "b) Lista los archivos y directorios."
+        echo "c) Busca archivos."
+
+        echo " "
+        echo "Selecciona la Funcion que creas es la correcta: "
+        read R
+        if [ "$R" = "b" ]
+        then
+                ((calificacion=calificacion+1))
+                clear
+                break
+        else
+                clear
+                break
+                fi;
+done
+
+while [ $try 0 ];
+do
+        vis
+        echo "No.5"
+        echo "Comando: cd"
+
+        echo " "
+        echo "a) Cambia al usuario a modo root."
+        echo "b) Elimina archivos o carpetas."
+        echo "c) Cambia de un directorio a otro."
+
+        echo " "
+        echo "Selecciona la Funcion que creas es la correcta: "
+        read R
+        if [ "$R" = "c" ]
+        then
+                ((calificacion=calificacion+1))
+                clear
+                break
+        else
+                clear
+                break
+                fi;
+done
+
+while [ $try 0 ];
+do
+        vis
+        echo "No.6"
+        echo "Comando: mv"
+
+        echo " "
+        echo "a) Mueve directorios o archivos."
+        echo "b) Combina archivos en uno mismo."
+        echo "c) Busca cadenas de caracteres en archivos."
+
+        echo " "
+        echo "Selecciona la Funcion que creas es la correcta: "
+        read R
+        if [ "$R" = "a" ]
+        then
+                ((calificacion=calificacion+1))
+                clear
+                break
+        else
+                clear
+                break
+                fi;
+done
+
+while [ $try 0 ];
+do
+        vis
+        echo "No.7"
+        echo "Comando: cp"
+        echo " "
+        echo "a) Calcula el uso del disco de un archivo o directorio."
+        echo "b) Copia archivos o directorios."
+        echo "c) Solicita ayuda con un comando."
+
+        echo " "
+        echo "Selecciona la Funcion que creas es la correcta: "
+        read R
+        if [ "$R" = "b" ]
+        then
+                ((calificacion=calificacion+1))
+                clear
+                break
+        else
+                clear
+                break
+                fi;
+done
+
+while [ $try 0 ];
+do
+        vis
+        echo "No.8"
+        echo "Comando: rm"
+
+        echo " "
+        echo "a) Elimina archivos."
+        echo "b) Elimina carpetas."
+        echo "c) Reinicia el sistema."
+
+        echo " "
+        echo "Selecciona la Funcion que creas es la correcta: "
+        read R
+        if [ "$R" = "a" ]
+        then
+                ((calificacion=calificacion+1))
+                clear
+                break
+        else
+                clear
+                break
+                fi;
+done
+
+while [ $try 0 ];
+do
+        vis
+        echo "No.9"
+        echo "Comando: cat"
+        echo " "
+        echo "a) Actualiza la base de datos."
+        echo "b) Imprime la fecha."
+        echo "c) Muestra el contenido de archivos."
+
+        echo " "
+        echo "Selecciona la Funcion que creas es la correcta: "
+        read R
+        if [ "$R" = "c" ]
+        then
+                ((calificacion=calificacion+1))
+                clear
+                break
+        else
+                clear
+                break
+                fi;
+done
+
+while [ $try 0 ];
+do
+        vis
+        echo "No.10"
+        echo "Comando: find"
+
+        echo " "
+        echo "a) Encuentra archivos."
+        echo "b) Ejecuta archivos."
+        echo "c) Descarga archivos."
+
+        echo " "
+        echo "Selecciona la Funcion que creas es la correcta: "
+        read R
+        if [ "$R" = "a" ]
+        then
+                ((calificacion=calificacion+1))
+                clear
+                break
+        else
+                clear
+                break
+                fi;
+done
+
+echo " "
+echo "==================================================="
+echo "|                                                 |"
+echo "| Felicidades has completado el TESTER de Nivel 1 |"
+echo "|                                                 |"
+echo "| La Puntuacion que obtuviste es: $calificacion               |"
+echo "|                                                 |"
+echo "==================================================="
+
+if [ $calificacion -le 5 ]
+then rep
+else apro
+fi;
+
+echo " "
+read -p "Presiona [Enter] para regresar al inicio..." fackenterkey
+clear
+===============================================================================================================
+Nivel 2
+#!/bin/bash
+
+## Nivel_2 Normal
+
+calificacion=0
+
+clear
+
+rep(){
+echo " "
+echo "======================"
+echo "|                    |"
+echo "|     REPROBASTE     |"
+echo "|                    |"
+echo "======================"
+echo " "
+echo "Reprobaste pero tranquilo, lo bueno que este no es un examen valido xd"
+}
+clear
+
+apro(){
+echo " "
+echo "======================"
+echo "|                    |"
+echo "|     APROBASTE      |"
+echo "|                    |"
+echo "======================"
+echo " "
+echo "Wow eres muy inteligente, sigue asi crack"
+}
+clear
+
+vis(){
+echo "========================================"
+echo "|                                      |"
+echo "|   Nivel: 2      Dificultad: Normal   |"
+echo "|                                      |"
+echo "========================================"
+}
+
+
+while [ $try 0 ];
+do
+        vis
+        echo "No.1"
+        echo "Comando: termsave"
+
+        echo " "
+        echo "a) Crea screensavers."
+        echo "b) Elimina screens."
+        echo "c) Controla la velocidad de procesos."
+
+        echo " "
+        echo "Selecciona la Funcion que creas es la correcta: "
+        read R
+        if [ "$R" = "a" ]
+        then
+                ((calificacion=calificacion+1))
+                clear
+                break
+        else
+                clear
+                break
+                fi;
+done
+
+while [ $try 0 ];
+do
+        vis
+        echo "No.2"
+        echo "Comando: pv"
+
+        echo " "
+        echo "a) Modifica el calendario."
+        echo "b) Supervisa el monitoreo de copia de datos."
+        echo "c) Descarga un sitio web."
+
+        echo " "
+        echo "Selecciona la Funcion que creas es la correcta: "
+        read R
+        if [ "$R" = "b" ]
+        then
+                ((calificacion=calificacion+1))
+                clear
+                break
+        else
+                clear
+                break
+                fi;
+done
+
+while [ $try 0 ];
+do
+        vis
+        echo "No.3"
+        echo "Comando: ping"
+
+        echo " "
+        echo "a) Apaga un windows remotamente."
+        echo "b) Muestra la tabla ASCII."
+        echo "c) Administra la red."
+
+        echo " "
+        echo "Selecciona la Funcion que creas es la correcta: "
+        read R
+        if [ "$R" = "c" ]
+        then
+                ((calificacion=calificacion+1))
+                clear
+                break
+        else
+                clear
+                break
+                fi;
+done
+
+while [ $try 0 ];
+do
+        vis
+        echo "No.4"
+        echo "Comando: pstree"
+
+        echo " "
+        echo "a) Crea procesos."
+        echo "b) Muestra el arbol de procesos."
+        echo "c) Muestra el arbol de directorios."
+
+        echo " "
+        echo "Selecciona la Funcion que creas es la correcta: "
+        read R
+        if [ "$R" = "b" ]
+        then
+                ((calificacion=calificacion+1))
+                clear
+                break
+        else
+                clear
+                break
+                fi;
+done
+
+while [ $try 0 ];
+do
+        vis
+        echo "No.5"
+        echo "Comando: nl"
+        echo " "
+        echo "a) Muestra un archivo numerado."
+        echo "b) Alarma cuando se detecta una IP."
+        echo "c) Crea archivos numerados."
+
+        echo " "
+        echo "Selecciona la Funcion que creas es la correcta: "
+        read R
+        if [ "$R" = "a" ]
+        then
+                ((calificacion=calificacion+1))
+                clear
+                break
+        else
+                clear
+                break
+                fi;
+done
+
+while [ $try 0 ];
+do
+        vis
+        echo "No.6"
+        echo "Comando: kill"
+
+        echo " "
+        echo "a) Muestra la version del kernel usado."
+        echo "b) Imprime un archivo."
+        echo "c) Mata procesos."
+
+        echo " "
+        echo "Selecciona la Funcion que creas es la correcta: "
+        read R
+        if [ "$R" = "c" ]
+        then
+                ((calificacion=calificacion+1))
+                clear
+                break
+        else
+                clear
+                break
+                fi;
+done
+
+while [ $try 0 ];
+do
+        vis
+        echo "No.7"
+        echo "Comando: mount"
+
+        echo " "
+        echo "a) Calcula el uso del disco de un archivo o directorio."
+        echo "b) Solicita ayuda con un comando."
+        echo "c) Monta sistemas de ficheros."
+
+        echo " "
+        echo "Selecciona la Funcion que creas es la correcta: "
+        read R
+        if [ "$R" = "c" ]
+        then
+                ((calificacion=calificacion+1))
+                clear
+                break
+        else
+                clear
+                break
+                fi;
+done
+
+while [ $try 0 ];
+do
+        vis
+        echo "No.8"
+        echo "Comando: df"
+
+        echo " "
+        echo "a) Muestra espacio usado por rpm instalados."
+        echo "b) Muestra particiones montadas."
+        echo "c) Muestra el tamaño de directorios y archivos."
+
+        echo " "
+        echo "Selecciona la Funcion que creas es la correcta: "
+        read R
+        if [ "$R" = "b" ]
+        then
+                ((calificacion=calificacion+1))
+                clear
+                break
+        else
+                clear
+                break
+                fi;
+done
+
+while [ $try 0 ];
+do
+        vis
+        echo "No.9"
+        echo "Comando: passwd"
+
+        echo " "
+        echo "a) Permite el borrado de ficheros."
+        echo "b) Muestra permisos."
+        echo "c) Cambia contraseña."
+
+        echo " "
+        echo "Selecciona la Funcion que creas es la correcta: "
+        read R
+        if [ "$R" = "c" ]
+        then
+                ((calificacion=calificacion+1))
+                clear
+                break
+        else
+                clear
+                break
+                fi;
+done
+
+while [ $try 0 ];
+do
+        vis
+        echo "No.10"
+        echo "Comando: lsattr"
+
+        echo " "
+        echo "a) Muestra atributos especiales."
+        echo "b) Descomprime ficheros."
+        echo "c) Comprime ficheros."
+
+        echo " "
+        echo "Selecciona la Funcion que creas es la correcta: "
+        read R
+        if [ "$R" = "a" ]
+        then
+                ((calificacion=calificacion+1))
+                clear
+                break
+        else
+                clear
+                break
+                fi;
+done
+
+echo " "
+echo "==================================================="
+echo "|                                                 |"
+echo "| Felicidades has completado el TESTER de Nivel 2 |"
+echo "|                                                 |"
+echo "| La Puntuacion que obtuviste es: $calificacion               |"
+echo "|                                                 |"
+echo "==================================================="
+
+if [ $calificacion -le 5 ]
+then rep
+else apro
+fi;
+
+echo " "
+read -p "Presiona [Enter] para regresar al inicio..." fackenterkey
+clear
+==========================================================================================================================
+Nivel 3
+#!/bin/bash
+
+## Nivel_3 Dificil
+
+calificacion=0
+
+clear
+
+rep(){
+echo " "
+echo "======================"
+echo "|                    |"
+echo "|     REPROBASTE     |"
+echo "|                    |"
+echo "======================"
+echo " "
+echo "Reprobaste pero tranquilo, lo bueno que este no es un examen valido xd"
+}
+clear
+
+apro(){
+echo " "
+echo "======================"
+echo "|                    |"
+echo "|     APROBASTE      |"
+echo "|                    |"
+echo "======================"
+echo " "
+echo "Wow eres muy inteligente, sigue asi crack"
+}
+clear
+
+vis(){
+echo "========================================"
+echo "|                                      |"
+echo "|   Nivel: 3      Dificultad: Dificil  |"
+echo "|                                      |"
+echo "========================================"
+}
+
+
+while [ $try 0 ];
+do
+        vis
+        echo "No.1"
+        echo "Comando: arch"
+
+        echo " "
+        echo "a) Elimina cache."
+        echo "b) Muestra la arquitectura de la maquina."
+        echo "c) Imprime ASCII."
+
+        echo " "
+        echo "Selecciona la Funcion que creas es la correcta: "
+        read R
+        if [ "$R" = "b" ]
+        then
+                ((calificacion=calificacion+1))
+                clear
+                break
+        else
+                clear
+                break
+                fi;
+done
+
+while [ $try 0 ];
+do
+        vis
+        echo "No.2"
+        echo "Comando: halt"
+
+        echo " "
+        echo "a) Apaga el sistema."
+        echo "b) Corta las primeras lineas de un archivo."
+        echo "c) Crea bucles."
+
+        echo " "
+        echo "Selecciona la Funcion que creas es la correcta: "
+        read R
+        if [ "$R" = "a" ]
+        then
+                ((calificacion=calificacion+1))
+                clear
+                break
+        else
+                clear
+                break
+                fi;
+done
+
+while [ $try 0 ];
+do
+        vis
+        echo "No.3"
+        echo "Comando: whatis"
+
+        echo " "
+        echo "a) Descarga archivos RPM."
+        echo "b) Busca contenido especificado."
+        echo "c) Consulta un manual."
+
+        echo " "
+        echo "Selecciona la Funcion que creas es la correcta: "
+        read R
+        if [ "$R" = "b" ]
+        then
+                ((calificacion=calificacion+1))
+                clear
+                break
+        else
+                clear
+                break
+                fi;
+done
+
+while [ $try 0 ];
+do
+        vis
+        echo "No.4"
+        echo "Comando: wget"
+
+        echo " "
+        echo "a) Imprime archivos get."
+        echo "b) Cambia los permisos de acceso."
+        echo "c) Descarga una web indicada."
+
+        echo " "
+        echo "Selecciona la Funcion que creas es la correcta: "
+        read R
+        if [ "$R" = "c" ]
+        then
+                ((calificacion=calificacion+1))
+                clear
+                break
+        else
+                clear
+                break
+                fi;
+done
+
+while [ $try 0 ];
+do
+        vis
+        echo "No.5"
+        echo "Comando: dpkg"
+        echo " "
+        echo "a) Administra paquetes de Debian."
+        echo "b) Cambia al usuario a modo root."
+        echo "c) Elimina volcados."
+
+        echo " "
+        echo "Selecciona la Funcion que creas es la correcta: "
+        read R
+        if [ "$R" = "a" ]
+        then
+                ((calificacion=calificacion+1))
+                clear
+                break
+        else
+                clear
+                break
+                fi;
+done
+
+while [ $try 0 ];
+do
+        vis
+        echo "No.6"
+        echo "Comando: dig"
+
+        echo " "
+        echo "a) Realiza consultas a servidores DNS."
+        echo "b) Combina archivos en uno mismo."
+        echo "c) Busca cadenas de caracteres en archivos."
+
+        echo " "
+        echo "Selecciona la Funcion que creas es la correcta: "
+        read R
+        if [ "$R" = "a" ]
+        then
+                ((calificacion=calificacion+1))
+                clear
+                break
+        else
+                clear
+                break
+                fi;
+done
+
+while [ $try 0 ];
+do
+        vis
+        echo "No.7"
+        echo "Comando: sync"
+        echo " "
+        echo "a) Calcula el uso del disco de un archivo o directorio."
+        echo "b) Muestra archivos dañados."
+        echo "c) Obliga la grabacion de datos de la cache."
+
+        echo " "
+        echo "Selecciona la Funcion que creas es la correcta: "
+        read R
+        if [ "$R" = "c" ]
+        then
+                ((calificacion=calificacion+1))
+                clear
+                break
+        else
+                clear
+                break
+                fi;
+done
+
+while [ $try 0 ];
+do
+        vis
+        echo "No.8"
+        echo "Comando: xxd"
+
+        echo " "
+        echo "a) Muestra la informacion del procesador."
+        echo "b) Crea un volcado hexadecimal."
+        echo "c) Reinicia el sistema."
+
+        echo " "
+        echo "Selecciona la Funcion que creas es la correcta: "
+        read R
+        if [ "$R" = "b" ]
+        then
+                ((calificacion=calificacion+1))
+                clear
+                break
+        else
+                clear
+                break
+                fi;
+done
+
+while [ $try 0 ];
+do
+        vis
+        echo "No.9"
+        echo "Comando: yes"
+
+        echo " "
+        echo "a) Actualiza la base de datos."
+        echo "b) Imprime indifinidamente lo indicado."
+        echo "c) Cambia al usuario y grupo propietarios a otros."
+
+        echo " "
+        echo "Selecciona la Funcion que creas es la correcta: "
+        read R
+        if [ "$R" = "b" ]
+        then
+                ((calificacion=calificacion+1))
+                clear
+                break
+        else
+                clear
+                break
+                fi;
+done
+
+while [ $try 0 ];
+do
+        vis
+        echo "No.10"
+        echo "Comando: hexdump"
+
+        echo " "
+        echo "a) Desglosa los codigos ASCII en su representacion decimal."
+        echo "b) Administra archivos DUMP en su totalidad."
+        echo "c) Crea una imagen iso en una particion indicada."
+
+        echo " "
+        echo "Selecciona la Funcion que creas es la correcta: "
+        read R
+        if [ "$R" = "a" ]
+        then
+                ((calificacion=calificacion+1))
+                clear
+                break
+        else
+                clear
+                break
+                fi;
+done
+
+echo " "
+echo "==================================================="
+echo "|                                                 |"
+echo "| Felicidades has completado el TESTER de Nivel 3 |"
+echo "|                                                 |"
+echo "| La Puntuacion que obtuviste es: $calificacion               |"
+echo "|                                                 |"
+echo "==================================================="
+
+if [ $calificacion -le 5 ]
+then rep
+else apro
+fi;
+
+echo " "
+read -p "Presiona [Enter] para regresar al inicio..." fackenterkey
+clear
